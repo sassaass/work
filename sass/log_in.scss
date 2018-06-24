@@ -1,0 +1,279 @@
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";}
+input,a{outline:none;}
+
+
+// log_in_content
+
+#log_in_content{
+    width: 1000px;
+    margin: 0 auto;
+    .header{
+        width: 100%;
+        height: 88px;
+        padding-top: 8px;
+        .header_logo{
+            width: 210px;
+            height: 80px;
+            
+        }
+        .bottom_line{
+            width: 100%;
+            height: 3px;
+            background: url(../img/login.png) 0px 0px repeat-x;
+            margin-top: 5px;
+        }
+    }
+    
+// main
+
+    #main{
+        width: 100%;
+        height: 500px;
+        padding: 20px 0 10px 0;
+        position: relative;
+        .main_log_in{
+            width: 380px;
+            height: 466px;
+            border: 1px solid #dcdddd;
+            background: #ebebeb;
+            position: absolute;
+            right: 34px;
+            top: 50px;
+            .main_content{
+                width: 372px;
+                border: 1px solid #fff;
+                background: #f7f8f8;
+                margin: 3px;
+                .content_bk{
+                    width: 306px;
+                    height: 446px;
+                    padding: 13px 33px 0;
+                    .main_content_tit{
+                        font-size: 16px;
+                        color: #595757;
+                    }
+                    form{
+                        width: 100%;
+                        .main_users{
+                            width: 100%;
+                            height: 52px;
+                            margin-top: 22px;
+                            position: relative;
+                            #use{
+                                width: 302px;
+                                height: 26px;
+                                font-size: 12px;
+                                border: 1px solid #aaa;
+                            }
+                            .use_clear{
+                                display: block;
+                                width: 22px;
+                                height: 26px;
+                                background: url(../img/input_login.jpg) no-repeat right 0;
+                                position: absolute;
+                                right: 5px;
+                                top: 2px;
+                                cursor: pointer;
+                            }
+                            span{
+                                display: block;
+                                float: right;
+                                margin: 7px 0 5px;
+                                a{
+                                    font-size: 12px;
+                                    color: #aaa;
+                                    &:hover{
+                                        text-decoration: underline;
+                                        color: #8cb91e;
+                                    }
+                                }
+                            }
+                        }
+                        .main_psw{
+                            width: 100%;
+                            height: 52px;
+                            #psw{
+                                width: 302px;
+                                height: 26px;
+                                border: 1px solid #aaaaaa;
+                            }
+                        }
+                        .main_btn{
+                            width: 100%;
+                            height: 30px;
+                            margin-top: 27px;
+                            #sub_btn{
+                                width: 209px;
+                                height: 30px;
+                                background: url(../img/login.png) no-repeat 0 -5px;
+                                border: none;
+                                border-radius: 4px;
+                                float: left;
+                                color: white;
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+                            .zc_btn{
+                                width: 79px;
+                                height: 30px;
+                                float: right;
+                                a{
+                                    display: block;
+                                    width: 79px;
+                                    height: 30px;
+                                    background: url(../img/login.png) no-repeat -89px -149px;
+                                    text-align: center;
+                                    line-height: 30px;
+                                    border-radius: 4px;
+                                    color: #479202;
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                    .fgx{
+                        width: 100%;
+                        height: 1px;
+                        background: url(../img/line_03.png) repeat-x;
+                        margin: 22px 0 16px;
+                    }
+                    .partner{
+                        width: 100%;
+                        .par_tit{
+                            font-size: 12px;
+                            color: #595757;
+                        }
+                        .par_lists{
+                            width: 100%;
+                            line-height: 20px;
+                            overflow: hidden;
+                            li{
+                                line-height: 20px;
+                                float: left;
+                                padding: 0 16px 0 22px;
+                                margin: 16px 0 0 0;
+                                border-right: 1px solid #dcdddd;
+                                i{
+                                    display: block;
+                                    width: 16px;
+                                    height: 20px;
+                                    padding-right: 6px;
+                                    cursor: pointer;
+                                    float: left;
+                                }
+                                a{
+                                    color: #807e7e;
+                                    font-size: 12px;
+                                    &:hover{
+                                        text-decoration: underline;
+                                        color: #8cb91e;
+                                    }
+                                }
+                            }
+                            .qq_li{
+                                i{
+                                    background: url(../img/login.png) no-repeat -209px -75px;
+                                }
+                            }
+                            .renren_li{
+                                i{
+                                    background: url(../img/login.png) no-repeat -209px -96px;
+                                }
+                            }
+                            .kaixin_li{
+                                border: none;
+                                i{
+                                    background: url(../img/login.png) no-repeat -209px -117px;
+                                }
+                            }
+                            .zfb_li{
+                                margin: 16px 13px 0 0;
+                                i{
+                                    background: url(../img/login.png) no-repeat -209px -138px;
+                                }
+                            }
+                            .xinlang_li{
+                                margin: 16px 13px 0 0;
+                                padding-left: 0;
+                                i{
+                                    background: url(../img/login.png) no-repeat -209px -159px;
+                                }
+                            }
+                            .baidu_li{
+                                margin: 16px 13px 0 0;
+                                padding-left: 0;
+                                border: none;
+                                i{
+                                    background: url(../img/login.png) no-repeat -209px -180px;
+                                }
+                            }
+                            .jianhang_li{
+                                i{
+                                    background: url(../img/login.png) no-repeat -209px -201px;
+                                }
+                            }
+                            .smzdm_li{
+                                margin: 16px 13px 0 0;
+                                i{
+                                    background: url(../img/login.png) no-repeat -209px -222px;
+                                }
+                            }
+                            .zyrs_li{
+                                margin: 16px 13px 0 0;
+                                i{
+                                    background: url(../img/login.png) no-repeat -209px -243px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer
+
+#footer{
+    width: 100%;
+    background: #efefef;
+    padding-top: 20px;
+    .footer_content{
+        width: 1000px;
+        margin: 0 auto;
+        line-height: 26px;
+        text-align: center;
+        font-size: 12px;
+        color: #606060;
+        .gw{
+            display: inline-block;
+            width: 200px;
+            a{
+                
+                img{
+                    float: left;
+                }
+                p{
+                    &:hover{
+                           text-decoration: underline;
+                           color: #8cb91e;
+                    }
+                }
+            }
+        }
+        span{
+            display: inline-block;
+        }
+    }
+    .footer_bottom{
+        height: 28px;
+        background: #8cb91e;
+    }
+}
