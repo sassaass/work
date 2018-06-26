@@ -28,8 +28,6 @@ $(function(){
 		$(".banner_hover li").eq(index).addClass("hover").siblings().removeClass("hover");
 	}
 	
-
-	
 	var timer = setInterval(function(){
 		banner();
 	},2000)
@@ -76,7 +74,32 @@ $(function(){
 	})
 		
 		
-		//  划过
+		
+	// table
+	
+	$(".cont_tit li").mouseover(function(){
+		$(".cont_tit li").eq($(this).index()).addClass("tab").siblings().removeClass("tab");
+		$(".cont_wrap .cont").hide().eq($(this).index()).show();
+	})
+		
+	
+		// 商品列表
+		
+	$(".lists li").mouseover(function(){
+		$(".lists li").eq($(this).index()).addClass("spb").siblings().removeClass("spb");
+		
+		$(".sub_kinds").hide().eq($(this).index()).show();
+	})
+	$(".lists li").mouseout(function(){
+		$(".sub_kinds").css("display","none");
+	})
+		
+		
+		
+		
+		
+		
+		//  图片划过效果
 		
 		
 	$(".xgt a").mouseenter(function(){
@@ -252,24 +275,46 @@ $(function(){
 	
 	// 楼梯
 	
+	var flag = true;
 	$(window).scroll(function(){
-		var scrollTop = $(this).scrollTop();
-		if(scrollTop > 1000){
-			$("#stairs").css("display","block");
-		}else{
-			$("#stairs").css("display","none");
-		}
-		
-		$(".s1").each(function(){
-			if(screenTop >= $(this).offset().top - $(this).outerHeight()/2){
-				var index = $(this).index();
-				$("#")
+		if(flag){
+			var scrollTop = $(this).scrollTop();
+			if(scrollTop > 1000){
+				$("#stairs").css("display","block");
+			}else{
+				$("#stairs").css("display","none");
 			}
-		})
+			
+			$(".s1").each(function(){
+				if(screenTop = 0){
+					var index = $(this).index();
+					console.log(index);
+					$(".stairs_c li").eq(index).css("background","green");
+				}
+			})
+		}
+	})
+	
+	$(".stairs_c li").click(function(){
+		flag = false;
+		var index = $(this).index();
+		console.log(index);
+		$("html,body").animate({"scrollTop":$(".stairs_c li").eq(index).offset().top},500,function(){
+					flag = true;
+				});
 	})
 		
 		
+		// 头部悬浮
 		
+		$(window).scroll(function(){
+			var scrollTop = $(this).scrollTop();
+			if(scrollTop > 800){
+				$("#header_top").css("display","block");
+			}else{
+				$("#header_top").css("display","none");
+			}
+		})
 		
 		
 		

@@ -15,8 +15,7 @@ input,a{outline:none;}
     height: 80px;
     margin: 0 auto;
     padding-bottom: 12px;
-//  background: url(../img/hbg.png) repeat-x;
-    background: #cecece;
+    background: url(../img/hbg.png) repeat-x;
     position: fixed;
     z-index: 1000000;
     top: 0;
@@ -92,6 +91,109 @@ input,a{outline:none;}
         }
     }
 }
+
+
+// 侧边栏
+
+.wm_toolbar{
+    width: 310px;
+    height: 100%;
+    color: #fff;
+    position: fixed;
+    right: -276px;
+    top: 0;
+    z-index: 9999999;
+    .toolbar_left{
+        width: 34px;
+        
+        background: #000;
+        float: left;
+        position: relative;
+        left: 0;
+        .wm_toolbar_top{
+            width: 34px;
+            height: 216px;
+            font-size: 12px;
+            position: absolute;
+            left: 0;
+            top: 103.75px;
+            .wm_toolbar_tab{
+                width: 18px;
+                height: 88px;
+                padding: 10px 8px;
+                text-align: center;
+                cursor: pointer;
+                overflow: hidden;
+                em{
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    background: url(../img/cart.jpg) no-repeat -178px -42px;
+                }
+                .num{
+                    display: inline-block;
+                    height: 16px;
+                    line-height: 16px;
+                    margin: 8px auto 0;
+                    padding: 0 3px;
+                    border-radius: 3px;
+                    color: #fff;
+                }
+            }
+        }
+        .wm_toolbar_footer{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            ul{
+                li{
+                    width: 34p;
+                    height: 34px;
+                    line-height: 34px;
+                    margin-top: 6px;
+                    cursor: pointer;
+                    position: absolute;
+                    span{
+                        width: 58px;
+                        height: 34px;
+                        line-height: 34px;
+                        background: #3da700;
+                        padding-left: 12px;
+                        overflow: hidden;
+                        display: none;
+                        position: absolute;
+                        right: 34px;
+                    }
+                    .collect{
+                        display: inline-block;
+                        width: 34px;
+                        height: 34px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        background: url(../img/cart.jpg) no-repeat 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -479,8 +581,42 @@ input,a{outline:none;}
                 h3{
                     width: 172px;
                     height: 32px;
+                    line-height: 32px;
+                    font-size: 14px;
                     padding: 0 19px 0 19px;
-                    
+                    overflow: hidden;
+                    b{
+                        width: 18px;
+                        height: 18px;
+                        float: left;
+                        margin: 6px 16px 0 0;
+                        background: url(../img/151.png) no-repeat 0 0;
+                    }
+                    a{
+                        margin-right: 2px;
+                        color: #fff;
+                    }
+                }
+                .sub_kinds{
+                    width: 757px;
+                    height: 419px;
+                    padding: 30px 15px 0 15px;
+                    border-right: 1px solid #3a9900;
+                    border-bottom: 1px solid #3a9900;
+                    background: #fff;
+                    position: absolute;
+                    left: 210px;
+                    top: 0;
+                    overflow: hidden;
+                    display: none;
+                }
+                .spb{
+                    background: url(../img/151.png) no-repeat -18px 0;
+                    background-color: #fff;
+                    a{
+                        color: green;
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -652,6 +788,91 @@ input,a{outline:none;}
     }
 }
 
+//  cont_r
+
+.cont_r{
+    width: 211px;
+    height: 450px;
+    margin-top: 5px;
+    background: #fff;
+    position: absolute;
+    right: 107px;
+    top: 330px;
+    .cont_tit{
+        width: 202px;
+        position: absolute;
+        overflow: hidden;
+        li{
+            width: 67px;
+            height: 29px;
+            line-height: 29px;
+            text-align: center;
+            float: left;
+            font-size: 12px;
+            background: #F7F7F7;
+            a{
+                color: #3c3c3c;
+            }
+        }
+        .tab{
+            border-bottom: 2px solid #2d8800;
+            a{
+                color: #0D8700;
+            }
+        }
+        
+    }
+    .cont_wrap{
+        height: 75px;
+        padding: 35px 16px 6px;
+        .cont{
+            height: 50px;
+            padding: 7px 0;
+            overflow: hidden;
+            position: relative;
+            display: none;
+            ul{
+                position: absolute;
+                left: 0;
+                top: 0;
+                .infor{
+                    height: 21px;
+                    line-height: 21px;
+                    overflow: hidden;
+                    font-size: 12px;
+                    margin-left: 16px;
+                    a{
+                        &:hover{
+                            color: #0D8700;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .min_lead{
+        .lead_btn_wrap{
+            width: 201px;
+            border-top: 1px solid #ddd;
+            overflow: hidden;
+            .lead_btn{
+                float: left;
+                width: 66px;
+                height: 60px;
+                border-bottom: 1px dotted #ddd;
+                border-right: 1px dotted #ddd;
+                overflow: hidden;
+                text-align: center;
+            }
+        }
+    }
+    .add_b{
+        width: 200px;
+        height: 148px;
+        
+    }
+}
 
 
 //  main
