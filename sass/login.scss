@@ -68,7 +68,6 @@ input,a{outline:none;}
                 position: relative;
                 .error_ts{
                     display: block;
-                    width: 100px;
                     height: 18px;
                     border: 1px solid rgb(250, 162, 166);
                     background: rgb(254, 230, 231);
@@ -76,6 +75,11 @@ input,a{outline:none;}
                     padding: 0 20px 0 16px;
                     position: absolute;
                     top: -17px;
+                    font-size: 12px;
+                    display: none;
+                    b{
+                        font-weight: 100;
+                    }
                     i{
                         display: block;
                         width: 10px;
@@ -96,9 +100,11 @@ input,a{outline:none;}
                     width: 127px;
                     float: left;
                 }
-                #btn{
+                .fs{
                     width: 100px;
                     height: 34px;
+                    line-height: 34px;
+                    text-align: center;
                     float: right;
                     background: #43a41b;
                     color: white;

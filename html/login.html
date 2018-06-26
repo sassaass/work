@@ -36,6 +36,7 @@
 					<form action="">
 						<div class="form_txt">
 							<span class="ts_1 error_ts">
+								<b>请您输入正确的邮箱或手机</b>
 								<i></i>
 							</span>
 							<input type="text" name="txt" id="txt" placeholder="邮箱/手机" />
@@ -43,6 +44,7 @@
 						
 						<div class="form_use">
 							<span class="ts_2 error_ts">
+								<b></b>
 								<i></i>
 							</span>
 							<input type="text" name="" id="use" placeholder="用户名" />
@@ -50,6 +52,7 @@
 						
 						<div class="form_psw1">
 							<span class="ts_3 error_ts">
+								<b></b>
 								<i></i>
 							</span>
 							<input type="password" name="psw1" id="psw1" placeholder="设置密码" />
@@ -57,6 +60,7 @@
 						
 						<div class="form_psw2">
 							<span class="ts_4 error_ts">
+								<b></b>
 								<i></i>
 							</span>
 							<input type="password" name="" id="psw2" placeholder="确认密码" />
@@ -64,20 +68,21 @@
 						
 						<div class="form_phone_yz">
 							<span class="ts_5 error_ts">
+								<b></b>
 								<i></i>
 							</span>
-							<input type="text" name="phone_yz" id="phone_yz" placeholder="手机验证码" />
-							<input type="button" name="btn" id="btn" value="发送验证码" />
+							<input type="text" name="phone_yz" id="phone_yz" placeholder="请输入验证码" />
+							<div class="fs">获取验证码</div>
 						</div>
 						
 						<div class="fwxx">
 							<span>
-								<input type="checkbox" name="agree" id="agree" value="" />
+								<input type="checkbox" name="agree" checked="checked" id="agree" value="" />
 							</span>
 							<b>我已阅读并同意</b>
 							<a href="">《我买网网上商城服务条款》</a>
 						</div>
-						<input type="submit" name="btn2" id="btn2" value="立即注册" />
+						<input type="button" name="btn2" id="btn2" value="立即注册" />
 						<div class="invite">我有邀请码></div>
 						<div class="invite_code">
 							<input type="text" name="txt2" id="txt2" placeholder="输入邀请码（选填）" />
@@ -106,5 +111,8 @@
 			</li>
 			<li class="footer_bottom"></li>
 		</ul>
+		
+		<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

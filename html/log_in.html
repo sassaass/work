@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../css/log_in.css"/>
+		
 	</head>
 	<body>
 		<div id="log_in_content">
@@ -39,13 +40,14 @@
 									</span>
 								</div>
 								<div class="main_psw">
-									<input type="password" name="pws" id="psw" placeholder="密码" />
+									<input type="password" name="psw" id="psw" placeholder="密码" />
+									<div class="input_error">密码不能为空！</div>
 									
 								</div>
 								<div class="main_btn">
-									<input type="submit" name="" id="sub_btn" value="登&nbsp;录" />
+									<input type="button" name="" id="sub_btn" value="登&nbsp;录" />
 									<div class="zc_btn">
-										<a href="">注&nbsp;册</a>
+										<a href="#">注&nbsp;册</a>
 									</div>
 								</div>
 							</form>
@@ -97,6 +99,27 @@
 			</div>
 		</div>
 					
+					
+					
+		<!--  弹出     -->
+		<div class="tc">
+			<i class="gb">x</i>
+			<div class="alert_content">
+				<h3>提示</h3>
+				<div class="alert_txt">
+					<p>对不起，您的账号或密码输入错误，请重新输入！密码输入错误5次后将冻结账号！</p>
+				</div>
+				<div class="alert_b">
+					<a href="">确定</a>
+				</div>
+			</div>
+		</div>
+					
+					
+					
+					
+					
+					
 		<!--footer-->
 			
 		<ul id="footer">
@@ -115,5 +138,8 @@
 			</li>
 			<li class="footer_bottom"></li>
 		</ul>
+		
+		<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/log_in.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

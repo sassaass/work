@@ -135,24 +135,24 @@ $(function(){
 	// main_2
 	
 	$(".lb_2").mouseover(function(){
-		$(".left_btn").css("display","block");
-		$(".right_btn").css("display","block");
+		$(".left2_btn").css("display","block");
+		$(".right2_btn").css("display","block");
 	})
 	$(".lb_2").mouseout(function(){
-		$(".left_btn").css("display","none");
-		$(".right_btn").css("display","noen");
+		$(".left2_btn").css("display","none");
+		$(".right2_btn").css("display","noen");
 	})
-	$(".left_btn").mouseover(function(){
-		$(".left_btn").css("display","block");
-		$(".right_btn").css("display","block");
+	$(".left2_btn").mouseover(function(){
+		$(".left2_btn").css("display","block");
+		$(".right2_btn").css("display","block");
 	})
-	$(".right_btn").mouseover(function(){
-		$(".left_btn").css("display","block");
-		$(".right_btn").css("display","block");
+	$(".right2_btn").mouseover(function(){
+		$(".left2_btn").css("display","block");
+		$(".right2_btn").css("display","block");
 	})
 	
 	// 点击
-	$(".left_btn").click(function(){
+	$(".left2_btn").click(function(){
 		
 		if($(".lb_2").position().left == -1210){
 			$(".lb_2").stop().animate({left:"0px"},500);
@@ -160,7 +160,7 @@ $(function(){
 			$(".lb_2").stop().animate({left:"-1210px"},500);
 		}
 	})
-	$(".right_btn").click(function(){
+	$(".right2_btn").click(function(){
 		if($(".lb_2").position().left == 0){
 			$(".lb_2").stop().animate({left:"-1210px"},500);
 		}else{
@@ -250,8 +250,23 @@ $(function(){
 	})
 	
 	
+	// 楼梯
 	
+	$(window).scroll(function(){
+		var scrollTop = $(this).scrollTop();
+		if(scrollTop > 1000){
+			$("#stairs").css("display","block");
+		}else{
+			$("#stairs").css("display","none");
+		}
 		
+		$(".s1").each(function(){
+			if(screenTop >= $(this).offset().top - $(this).outerHeight()/2){
+				var index = $(this).index();
+				$("#")
+			}
+		})
+	})
 		
 		
 		
