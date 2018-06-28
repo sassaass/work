@@ -85,12 +85,12 @@ $(function(){
 	
 		// 商品列表
 		
-	$(".lists li").mouseover(function(){
-		$(".lists li").eq($(this).index()).addClass("spb").siblings().removeClass("spb");
+	$(".lists>li").mouseover(function(){
+		$(".lists>li").eq($(this).index()).addClass("spb").siblings().removeClass("spb");
 		
 		$(".sub_kinds").hide().eq($(this).index()).show();
 	})
-	$(".lists li").mouseout(function(){
+	$(".lists>li").mouseout(function(){
 		$(".sub_kinds").css("display","none");
 	})
 		
@@ -317,9 +317,37 @@ $(function(){
 		})
 		
 		
+		// 右侧
+		
+		
+		$(".gwc").click(function(){
+			$(".wm_toolbar").stop().animate({right:"0"},500);
+		})
+		
+		$(".pop_title em").click(function(){
+			$(".wm_toolbar").stop().animate({right:"-276px"},500);
+		})
+		
+		
+		// 右侧回到顶部
+		
+		$(".hddb").click(function(){
+			var scrollTop = $(window).scrollTop();
+			$("html,body").animate({"scrollTop":0},500);
+		})
 		
 		
 		
+		
+		$.get("http://datainfo.duapp.com/shopdata/getclass.php",function(data){
+			data = JSON.parse(data);
+			console.log(data);
+			var str = "";
+			$.each(data,function(index,item){
+				str += `<li><a href="html/list.html?classID=${item.classID}">${item.className}</a></li>`;
+			})
+			$(".listall").html(str);
+		})
 		
 		
 		

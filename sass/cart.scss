@@ -1,0 +1,260 @@
+
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";color: #606060;}
+input,a{outline:none;}
+
+
+
+
+
+
+
+
+
+.wm_toolbar{
+    width: 310px;
+    color: #fff;
+    position: fixed;
+    right: -276px;
+    top: 0;
+    z-index: 999999;
+    height: 100%;
+    .toolbar_left{
+        width: 34px;
+        height: 100%;
+        background: url(../img/float_cart_bg.png) repeat-y;
+        float: left;
+        position: relative;
+        .wm_toolbar_top{
+            width: 34px;
+            height: 216px;
+            font-size: 12px;
+            position: absolute;
+            left: 0;
+            top: 103.75px;
+            .wm_toolbar_tab{
+                width: 18px;
+                height: 88px;
+                padding: 10px 8px;
+                text-align: center;
+                cursor: pointer;
+                overflow: hidden;
+                color: #fff;
+                background: #3da700;
+                em{
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    background: url(../img/cart.jpg) no-repeat -178px -42px;
+                }
+                .num{
+                    display: inline-block;
+                    height: 16px;
+                    line-height: 16px;
+                    margin: 8px auto 0;
+                    padding: 0 3px;
+                    border-radius: 3px;
+                    color: #fff;
+                    background: #000;
+                }
+            }
+        }
+        .wm_toolbar_footer{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            ul{
+                width: 34px;
+                height: 194px;
+                li{
+                    width: 34px;
+                    height: 34px;
+                    line-height: 34px;
+                    margin-top: 6px;
+                    text-align: center;
+                    cursor: pointer;
+                    position: relative;
+                    a{
+                        display: block;
+                        width: 34px;
+                        height: 34px;
+                        color: #fff;
+                    }
+                    &:hover a{
+                        background: darkgoldenrod;
+                        color: #333333;
+                    }
+                }
+            }
+        }
+    }
+    .pop_up{
+        width: 276px;
+        height: 100%;
+        background: #e6e6e6;
+        position: absolute;
+        left: 34px;
+        overflow: hidden;
+        .pop_layer{
+            .pop_title{
+                height: 40px;
+                line-height: 40px;
+                font-size: 18px;
+                color: #383838;
+                text-align: center;
+                position: relative;
+                em{
+                    display: block;
+                    width: 12px;
+                    height: 12px;
+                    background: url(../img/cart.jpg) no-repeat -238px 0;
+                    position: absolute;
+                    right: 18px;
+                    top: 14px;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+            }
+            .scroll_box{
+                height: 352px;
+                .wm_accounts{
+                    width: 240px;
+                    height: 72px;
+                    position: absolute;
+                    left: 18px;
+                    bottom: 0;
+                    .chosen{
+                        height: 32px;
+                        color: #5b5b5b;
+                        background: #e6e6e6;
+                        overflow: hidden;
+                        .fl{
+                            height: 32px;
+                            line-height: 32px;
+                            float: left;
+                        }
+                        .fr{
+                            height: 32px;
+                            line-height: 32px;
+                            float: right;
+                            color: #dd0800;
+                        }
+                    }
+                    .wm_btn_buy{
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 16px;
+                        text-align: center;
+                        background: #dd0800;
+                        color: #fff;
+                        cursor: pointer;
+                        a{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#wrap{
+    width: 1208px;
+    height: 492px;
+    margin: 100px auto;
+    border: 1px solod #e7e7e7;
+    box-shadow: 0 0 10px #dfdede;
+    padding: 22px 25px;
+    .sp_tit{
+        h4{
+            font-size: 32px;
+            color: #479202;
+            margin-bottom: 10px;
+        }
+    }
+    .sp_content{
+        .sp_content_img{
+            width: 320px;
+            height: 320px;
+            overflow: hidden;
+            position: relative;
+            float: left;
+        }
+        .sp_content_fr{
+            width: 828px;
+            margin-left: 30px;
+            float: left;
+            .fr_jg{
+                width: 828px;
+                height: 400px;
+                overflow: hidden;
+                .jj{
+                    height: 31px;
+                    color: #f97030;
+                    font-size: 23px;
+                    margin: 69px 0 38px 126px;
+                    span{
+                        color: #f97030;
+                        font-size: 31px;
+                    }
+                }
+                p{
+                    height: 24px;
+                    line-height: 24px;
+                    padding-left: 115px;
+                    background: #80b450;
+                    color: #fff;
+                    font-size: 12px;
+                }
+                .sl{
+                    width: 124px;
+                    height: 25px;
+                    margin: 22px 0 0 121px;
+                    span{
+                        display: block;
+                        width: 26px;
+                        height: 25px;
+                        background: #e6e6e6;
+                        float: left;
+                        text-align: center;
+                        line-height: 25px;                        
+                        cursor: pointer;
+                        color: #6a917b;
+                    }
+                    input{
+                        width: 68px;
+                        height: 23px;
+                        background: #e6e6e6;
+                        margin: 0 2px;
+                        float: left;
+                        border: 0;
+                        text-align: center;
+                        color: #6a917b;
+                    }
+                }
+                #qg{
+                    width: 110px;
+                    height: 46px;
+                    background: #ff7f26;
+                    border: 0;
+                    margin: 34px  0 15px 121px;
+                    color: #fff;
+                    font-size: 15px;
+                    cursor: pointer;
+                }
+                .sj{
+                    width: 265px;
+                    height: 20px;
+                    background: #e6e6e6;
+                    font-size: 14px;
+                    margin: 0 121px;
+                }
+            }
+        }
+    }
+}

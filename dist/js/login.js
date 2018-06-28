@@ -50,7 +50,6 @@ $(function(){
 		if($("#phone_yz").val().toUpperCase() != $(".fs").text()){
 			$(".ts_5").css("display","block");
 			$(".ts_5 b").text("输入的验证码不正确");
-			console.log("a");
 		}else{
 			$(".ts_5 b").css("display","none");
 			
@@ -65,7 +64,25 @@ $(function(){
 		}
 	});
 	
-	$("#btn2").click(function(){
+	
+
+		$("#btn2").click(function(){
+			$.get("http://datainfo.duapp.com/shopdata/userinfo.php",{status:"register",userID:$("#txt").val(),password:$("#psw1").val()},function(data){
+				if(data == 0){
+					$(".ts_1").css("display","block");
+					$(".ts_1 b").text("手机号已存在，请换另外一个");
+				}
+				if(data == 1){
+					location.href = "log_in.html";
+				}
+			})
+		})
+
+
+	
+	
+	
+	/*$("#btn2").click(function(){
 		$.ajax({
 			type:"get",
 			url:"http://datainfo.duapp.com/shopdata/userinfo.php",
@@ -74,33 +91,11 @@ $(function(){
 			success:function(data){
 				if(data == 0){
 					$(".ts_1 b").text("用户名已存在，请换另外一个");
+				}else if(data == 1){
+					location.href = "log_in.html";
 				}
-					
-						if(data == 1){
-							location.href = "../index.html";
-						}
-					
+				
 			}
 		});
-	})
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	})*/
 })
