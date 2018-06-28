@@ -285,24 +285,24 @@ $(function(){
 				$("#stairs").css("display","none");
 			}
 			
-			$(".s1").each(function(){
+			/*$(".s1").each(function(){
 				if(screenTop = 0){
 					var index = $(this).index();
 					console.log(index);
 					$(".stairs_c li").eq(index).css("background","green");
 				}
-			})
+			})*/
 		}
 	})
 	
-	$(".stairs_c li").click(function(){
+	/*$(".stairs_c li").click(function(){
 		flag = false;
 		var index = $(this).index();
 		console.log(index);
 		$("html,body").animate({"scrollTop":$(".stairs_c li").eq(index).offset().top},500,function(){
 					flag = true;
 				});
-	})
+	})*/
 		
 		
 		// 头部悬浮

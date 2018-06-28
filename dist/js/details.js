@@ -51,64 +51,33 @@ $(function(){
 				</div>
 				
 				<div class="add_shop">加入购物车</div>
+			</div>
+			<div class="go_p">
+				<a href="cart.html">去购物车结算</a>
 			</div>`
 			$("#ck_wrap").html(str);
 			
-			$(".add_shop").click(function(){
-				$.get("http://datainfo.duapp.com/shopdata/updatecar.php",{userID:$.cookie("username"),goodsID:data[0].goodsID},function(data){
-					console.log(data);
+				$(".add_shop").click(function(){
+					$.get("http://datainfo.duapp.com/shopdata/updatecar.php",{userID:$.cookie("username"),goodsID:data[0].goodsID},function(data){
+						console.log(data);
+						if(data==0){
+							alert("添加失败");
+						}
+						if(data == 1){
+							alert("添加成功");
+						}
+						
+					})
 				})
-			})
-			})
-			// 放大镜
-			
-			$(".box").mouseover(function(){
-				$(".ck_pic_big").css("display","block");
-				$(".zoom").css("display","block");
-			})
-			$(".box").mouseout(function(){
-				$(".ck_pic_big").css("display","none");
-				$(".zoom").css("display","none");
-			})	
-			$(".ck_pic").mousemove(function(e){
-				var evt = e || event;
-				var x = e.vt.pageX - $(".zoom").offset().left;
-				var y = e.evt.pageY - $(".zoom").offset().top;
-				var _left = x - $(".zoom").width()/2 + "px";
-				var _top = y - $(".zoom").height()/2 + "px";
-				console.log(_left);
-				$(".zoom").css({left:"_left",top:"_top"});
 				
-			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			// 添加   & 删除
+				
 			var count = $("#txt").val();
 			$(".reduce").click(function(){
-				count --;
+				count--;
 				$("#txt").val(count);
 			})
-			
 			$(".aadd").click(function(){
-				count ++;
+				count++;
 				$("#txt").val(count);
 			})
 			
@@ -118,8 +87,54 @@ $(function(){
 			$(".add_shop").click(function(){
 				$(".num").text($("#txt").val());
 			})
+		
+		
+		
+		// 放大镜
+		var oCk_wrap = document.getElementById("ck_wrap");
+		var oZoomBox = document.getElementsByClassName("box")[0];
+		var oMidArea = document.getElementsByClassName("ck_pic")[0];
+		var oZoom = document.getElementsByClassName("zoom")[0];
+		var oMidImg = oMidArea.children[0];
+		var oBigArea = document.getElementsByClassName("ck_pic_big")[0];
+		var oBigImg = oBigArea.children[0];
+		oMidArea.onmouseover = function(){
+			oBigArea.style.display = "block";
+			oZoom.style.display = "block";
+		}
+		oMidArea.onmouseout = function(){
+			oBigArea.style.display = "none";
+			oZoom.style.display = "none";
+		}
+		oMidArea.onmousemove = function(e){
+			var evt = e || event;
+			var x = evt.pageX - oCk_wrap.offsetLeft;  // 不能用offsetX来表示  事件源会发生改变
+			//console.log(oCk_wrap);
+			var y = evt.pageY - oCk_wrap.offsetTop;  // 不能用offsetY来表示
+			var _left = x-oZoom.offsetWidth/2;
+			var _top = y-oZoom.offsetHeight/2;
+			
+			if(_left<=0){
+				_left=0;
+			}
+			if(_left>=oMidArea.offsetWidth-oZoom.offsetWidth){
+				_left=oMidArea.offsetWidth-oZoom.offsetWidth;
+			}
+			if(_top<=0){
+				_top=0;
+			}
+			if(_top>=oMidArea.offsetHeight-oZoom.offsetHeight){
+				_top=oMidArea.offsetHeight-oZoom.offsetHeight;
+			}
+			
+			oZoom.style.left = _left + "px";
+			oZoom.style.top = _top + "px";
+			oBigImg.style.left = -_left*2 + "px";
+			oBigImg.style.top = -_top*2 + "px";
+		}
 			
 		
-	
-	
+	})
 })
+
+

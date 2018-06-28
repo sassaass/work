@@ -533,9 +533,10 @@ input,a{outline:none;}
     width: 1210px;
     height: 600px;
     margin: 0 auto;
+    position: relative;
     .box{
         width: 400px;
-        height: 600px;
+        height: 400px;
         float: left;
         position: relative;
         .ck_pic{
@@ -570,6 +571,7 @@ input,a{outline:none;}
             img{
                 width: 800px;
                 height: 800px;
+                position: absolute;
             }
         }
     }
@@ -628,6 +630,22 @@ input,a{outline:none;}
             text-align: center;
             color: #fff;
             margin: 50px 0 0 20px;
+            cursor: pointer;
+        }
+    }
+    .go_p{
+        width: 150px;
+        height: 50px;
+        background: red;
+        position: absolute;
+        right: 270px;
+        top: 278px;
+        text-align: center;
+        line-height: 50px;
+        a{
+            color: #fff;
         }
     }
 }
+
+

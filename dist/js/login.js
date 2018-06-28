@@ -78,8 +78,10 @@ $(function(){
 			})
 		})
 
-
-	
+		$(".invite").click(function(){
+			$(".invite_code").toggle()
+		})
+		
 	
 	
 	/*$("#btn2").click(function(){

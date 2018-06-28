@@ -57,10 +57,6 @@ $(function(){
 			}
 			$(".banner_img li").eq(index).css("display","block").siblings().css("display","none");
 		$("banner_hover li").eq(index).addClass("hover").siblings().remove("hover");
-		
-		
-		
-		
 	})
 	
 
@@ -73,7 +69,7 @@ $(function(){
 		$.getJSON("http://datainfo.duapp.com/shopdata/getGoods.php?callback=?",{classID:classid},function(data){
 			console.log(data);
 			var str = "";
-			$.each(data, function(index,item) {
+			$.each(data, function(index,item){
 				str += `
 					<dl>
 						<dt>
@@ -93,32 +89,34 @@ $(function(){
 					</dl>`
 			});
 			$(".tab_container").html(str);
+			
+			
+			
+		//  table  
+		
+			$(".hg li").mouseover(function(){
+				$(".tab_content ul li").eq($(this).index()).addClass("ahg").siblings().removeClass("ahg");
+				$(".tab_container").hide().eq($(this).index()).show();
+		})
+		
+		
+			// 弹出
+			
+			$(".goods_buy a").click(function(){
+				$("#list_wrap").css("display","block");
+			})
+			$(".play").click(function(){
+				location.href = "cart.html";
+			})
+			$(".go_shop").click(function(){
+				$("#list_wrap").css("display","none");
+			})
+			$("#list_wrap").click(function(){
+				$("#list_wrap").css("display","none");
+			})
 		});
 		
 		
 		
-			
-		//  table  
-		
-		$(".hg li").mouseover(function(){
-		$(".tab_content ul li").eq($(this).index()).addClass("ahg").siblings().removeClass("ahg");
-		$(".tab_container").hide().eq($(this).index()).show();
-	})
-	
-	
-		// 弹出
-		
-		$(".goods_buy a").click(function(){
-			$("#list_wrap").css("display","block");
-		})
-		$(".play").click(function(){
-			location.href = "cart.html";
-		})
-		$(".go_shop").click(function(){
-			$("#list_wrap").css("display","none");
-		})
-		$("#list_wrap").click(function(){
-			$("#list_wrap").css("display","none");
-		})
 	
 })

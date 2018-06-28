@@ -7,80 +7,66 @@
 	</head>
 	<body>
 		
-		<!--cebianlan-->
-		<div class="wm_toolbar">
-			<div class="toolbar_left">
-				<div class="wm_toolbar_top">
-					<div class="wm_toolbar_tab gwc">
-						<em></em>
-						购物车
-						<span class="num">0</span>
-					</div>
-				</div>
-				<div class="wm_toolbar_footer">
-					<ul>
-						<li class="wm_toolbar_tab">
-							<a href="log_in.html">账</a>
-						</li>
-						<li class="wm_toolbar_tab">
-							<a href="log_in.html">冲</a>
-						</li>
-						<li class="wm_toolbar_tab">
-							<a href="#">码</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="pop_up">
-				<div class="pop_layer">
-					<h3 class="pop_title">
-						我的购物车
-						<em></em>
-					</h3>
-					<div class="scroll_box">
-						<ul></ul>
-						<div class="wm_accounts">
-							<div class="chosen">
-								<span class="fl"></span>
-								<span class="fr"></span>
-							</div>
-							<div class="wm_btn_buy">
-								<a href="" target="_blank">去购物车</a>
-							</div>
-						</div>
-					</div>
-				</div>
+		<div class="top">
+			<a href="../index.html">
+				<img src="../img/logo_top.png"/>
+			</a>
+		</div>
+		
+		
+		<div class="cart_top">
+			<span class="top_l">我买网发货单</span>
+			<div class="top_r">
+				<p>已选商品（含预估运费）：</p>
+				<span>0</span>
+				<div class="cart_anniu">去结算</div>
 			</div>
 		</div>
 		
-		<!--content-->
-		
-		<div id="wrap">
-			<div class="sp_tit">
-				<h4>口感香浓润滑</h4>
-				<span>惠享上质-欧诺鲜全脂牛奶1L*12（法国原装进口），优选小牧场奶，口感香浓柔滑。</span>
+		<div class="cart_content">
+			<div class="cart_li">
+				<div class="tit_1 odct_title">商品</div>
+				<div class="tit_2 odct_title">单价</div>
+				<div class="tit_3 odct_title">数量</div>
+				<div class="tit_4 odct_title">重量</div>
+				<div class="tit_5 odct_title">总计</div>
+				<div class="tit_6 odct_title">操作</div>
 			</div>
-			<div class="sp_content">
-				<div class="sp_content_img">
-					<img src="../img/sp_img.jpg"/>
-				</div>
-				<div class="sp_content_fr">
-					<div class="fr_jg">
-						<div class="jj">
-							￥
-							<span>89</span>
-						</div>
-						<p>距离结束还剩3 天以上（团购商品数量有限，先到先得，售完为止）</p>
-						<div class="sl">
-							<span class="lose">-</span>
-							<input type="text" name="" id="count" value="1" />
-							<span class="add">+</span>
-						</div>
-						<input type="button" name="" id="qg" value="抢购" />
-						<div class="sj">生产日期：2017-11-10保质期：365天</div>
+			<div class="cart_b">
+				<div class="b_1">
+					<div class="qx">
+						<input type="checkbox" name="in_qx" id="in_qx" value="" />全选
 					</div>
 				</div>
-			</div>
+				<div class="kkk"">
+						<!--<div class="ccc">
+						<div class="cart_img">
+							<div>
+								<input type="checkbox" name="" id="gouxuan" value="" />
+								<a class="pic_1" href="#">
+									
+								</a>
+								<div class="wz">
+									<a href="">
+										<p class="wz_1"></p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="cart_dj"></div>
+						<div class="cart_js">
+							<div class="reduce_g">-</div>
+							<div class="input_goods">
+								<input type="text" name="" id="wbsz" value="1" />
+							</div>
+							<div class="puls_g">+</div>
+						</div>
+						<div class="cart_we">1</div>
+						<div class="cart_zj">￥69</div>
+						<div class="cart_sc">删除</div>
+						</div>-->
+					</div>
+				</div>
 		</div>
 		
 		
@@ -90,8 +76,10 @@
 		
 		
 		
-		<link rel="stylesheet" type="text/css" href="../css/listDetails.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/cart.css"/>
 		<script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/listDetails.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+		<script src="../js/cart.js" type="text/javascript" charset="utf-8"></script>
+		
 	</body>
 </html>
